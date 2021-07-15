@@ -1,2 +1,1 @@
-# git
-Distributed Version Control System
+# [GIT Cheat Sheets](https://github.com/potatoscript/git/wiki)
