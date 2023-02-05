@@ -1,5 +1,3 @@
-### home
-
 # [GIT Cheat Sheets](https://github.com/potatoscript/git/wiki)
 
 - Long-Running Branches (main, master, develop, staging, production branch )
@@ -17,6 +15,8 @@
   2. GitFlow - more structure, more rules...
      - long-running : main + develop
      - short-lived : features, releases, hotfixes.
+
+### home
 
 |                                       |                                                       |
 | ------------------------------------- | ----------------------------------------------------- |
@@ -79,6 +79,8 @@ git merge feature/feature1
 - To solve the conflicts use
   - `git rebase`, `git pull`, `git cherry-pick`, `git stash apply`
   - use the git mergetool like `www.git-tower.com`
+
+[home](#home)
 
 ### Rebase
 
