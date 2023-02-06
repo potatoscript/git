@@ -25,6 +25,7 @@
 | ■ [Merge](#Merge)                     |                                                       |
 | ■ [Merge Conflicts](#Merge-Conflicts) | When Integrating commits from different Sources       |
 | ■ [Rebase](#Rebase)                   | Integrating with rebase -> a straight line of commits |
+| ■ [Cherry-Picking](#Cherry-Picking)   | Integrating Single, Specific Commits                  |
 
 [home](#home)
 
@@ -63,6 +64,7 @@ git push --set-upstream origin test
 
 ### Merge
 
+- Merging Branches = Integrating one Branch into Another
 - To merge branches locally, use git checkoutto switch to the branch you want to merge into.
 - Next, use git mergeand specify the name of the other branch to bring into this branch.
 
@@ -101,14 +103,69 @@ git merge feature/feature1
   - git rebase -i HEAD~3
   - removed all commits from branch A and temporary keep them somewhere
 - step 2 : create a straight line of commits
+
   - use `git log --oneline` to check the commit status and id
   - use `git rebase -i HEAD~3` to set the range of commit to rebase
   - next determine the desired action (reword or squash) only and don't edit the comment
     - reword -> edit comment
-    - squash -> combine commit
+
   ```git
      reword 6bcf266 Optimize markup structure in inddpage
      pick 762317c Change the page structure
-     pic del3564 Improve headline for improve
+     pick del3564 Improve headline for improve
   ```
+
+  - squash -> combine commit
+
+  ```git
+    pick 6bcf266 Optimize markup structure in inddpage
+    squash 762317c Change the page structure
+    pick del3564 Improve headline for improve
+  ```
+
+  this will combine `6bcf266` and `762317c` into new commit with new Id
+
 - step 3 : return back the commits of branch A with the new Id
+
+[home](#home)
+
+### Cherry Picking
+
+- allows you to select individual commits to be integrated
+- therfore use it for moving a commit to a different branch
+- when you commit to the wrong branch
+
+for example: by using merge C2 and C4 from branch feature-X will all moved to branch master
+
+by using cherry pick you can choice C2 or C4 only to move to branch master
+
+```
+   C1--------C3--------C5--------master
+     \
+      C2--------C4--------------feature-X
+
+```
+
+- Usage Example:
+  - WHen you committed on the wrong branch
+  - C3 should have been on feature-X
+
+```
+   C1--------C3-----------master
+     \
+      C2------------------feature-X
+```
+
+- first we shift to `feature-X` branch and apply cherry pick on the target commit
+
+```git
+  git checkout feature/neweletter
+  git cherry-pick 26bf1648
+```
+
+- next clean up the commit from the master branch
+
+```git
+  git checkout master
+  git reset --hard HEAD~1 #this will remove the C3 from master branch
+```
