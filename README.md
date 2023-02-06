@@ -84,12 +84,6 @@ git merge feature/feature1
 
 ### Rebase
 
-- the mechanism of `git rebase branch-B`
-- step 1 : removed all commits from branch A and temporary keep them somewhere
-- step 2 : create a straight line of commits
-- step 3 : return back the commits of branch A with the new Id
-- Do NOT use Rebase on commits that you have already pushed/shared on a remote repository!!!
-- Instead, use it for cleaning up your local commit history before merging it into a shared team branch.
 - Interactive Rebase
 
 ```git
@@ -98,4 +92,23 @@ git merge feature/feature1
 - reorder commits
 - combine multiple commits into one
 - edit/ssplit an existing commits into multiple new ones.
+- Do NOT use Rebase on commits that you have already pushed/shared on a remote repository!!!
+- Instead, use it for cleaning up your local commit history before merging it into a shared team branch.
 ```
+
+- the mechanism of `git rebase branch-B`
+- step 1 :
+  - git rebase -i HEAD~3
+  - removed all commits from branch A and temporary keep them somewhere
+- step 2 : create a straight line of commits
+  - use `git log --oneline` to check the commit status and id
+  - use `git rebase -i HEAD~3` to set the range of commit to rebase
+  - next determine the desired action (reword or squash) only and don't edit the comment
+    - reword -> edit comment
+    - squash -> combine commit
+  ```git
+     reword 6bcf266 Optimize markup structure in inddpage
+     pick 762317c Change the page structure
+     pic del3564 Improve headline for improve
+  ```
+- step 3 : return back the commits of branch A with the new Id
