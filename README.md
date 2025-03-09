@@ -18,7 +18,7 @@
 | [Workflow basic](https://github.com/potatoscript/git/wiki/Workflow)|Clone Pull Push from Remote and create branch `branch` `merge`|
 | [Workflow with feature branch](https://github.com/potatoscript/git/wiki/Workflow-feature)|using `tag`|
 | [Wiki Repository](https://github.com/potatoscript/git/wiki/Wiki-Repository)||
-
+| [Clone Repository](https://github.com/potatoscript/git/wiki/Clone-Repository)|clone all your GitHub repositories and their corresponding wiki repositories at once|
 ---
 
 - Long-Running Branches (main, master, develop, staging, production branch )
