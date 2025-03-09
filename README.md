@@ -1,4 +1,25 @@
-# [GIT Cheat Sheets](https://github.com/potatoscript/git/wiki)
+# GIT Cheat Sheets:
+| Title    | Remark/code  |
+| -------------| -----|
+| [Installation](https://github.com/potatoscript/git/wiki/Installation) | Setup and Configuration GIT `config`|
+| [Alias Setup](https://github.com/potatoscript/git/wiki/Alias-Setup)|shortcut for those long long commands|
+| [Basic Operation](https://github.com/potatoscript/git/wiki/Basic)|`init` `status` `commit` `cat` list `ls` `echo` `touch` `rm` |
+| [Create Repository](#Create-Repository)|https://stackoverflow.com/questions/20325089/hosting-a-git-server-on-localhost|
+| [.bashrc file](https://github.com/potatoscript/git/wiki/bashrc)|Create .bashrc file to store your own alias|
+| [.gitignore file](https://github.com/potatoscript/git/wiki/gitignore)|https://www.codegrepper.com/code-examples/csharp/aspnet+core+gitignore|
+| [Editing File](https://github.com/potatoscript/git/wiki/Editing-File)| read file `cat` and edit file `vim` or `code`|
+| [Move your project to Remote](https://github.com/potatoscript/git/wiki/Move-Project-to-Remote) | `remote` `push` |
+| [Restoring a File to an Earlier Version](https://github.com/potatoscript/git/wiki/Restore-File-Version)|`restore` |
+| [Trouble Shooting Conflict](https://github.com/potatoscript/git/wiki/Trouble-Shooting-Conflict)|`stash`|
+| [Unstaging Files](https://github.com/potatoscript/git/wiki/Unstaging-Files)|`restore` `clean` |
+| [Viewing Staged & Unstaged Changes](https://github.com/potatoscript/git/wiki/View-Unstaged)|`diff --staged` `difftool` |
+| [Viewing the History](https://github.com/potatoscript/git/wiki/View-History)|`log` |
+| [Viewing a Commit](https://github.com/potatoscript/git/wiki/View-Commit)|`show` `ls-tree`|
+| [Workflow basic](https://github.com/potatoscript/git/wiki/Workflow)|Clone Pull Push from Remote and create branch `branch` `merge`|
+| [Workflow with feature branch](https://github.com/potatoscript/git/wiki/Workflow-feature)|using `tag`|
+| [Wiki Repository](https://github.com/potatoscript/git/wiki/Wiki-Repository)||
+
+---
 
 - Long-Running Branches (main, master, develop, staging, production branch )
 
