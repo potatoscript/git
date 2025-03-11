@@ -1,218 +1,265 @@
-# GIT Cheat Sheets:
-| Title    | Remark/code  |
-| -------------| -----|
-| [Installation](https://github.com/potatoscript/git/wiki/Installation) | Setup and Configuration GIT `config`|
-| [Alias Setup](https://github.com/potatoscript/git/wiki/Alias-Setup)|shortcut for those long long commands|
-| [Basic Operation](https://github.com/potatoscript/git/wiki/Basic)|`init` `status` `commit` `cat` list `ls` `echo` `touch` `rm` |
-| [Create Repository](#Create-Repository)|https://stackoverflow.com/questions/20325089/hosting-a-git-server-on-localhost|
-| [.bashrc file](https://github.com/potatoscript/git/wiki/bashrc)|Create .bashrc file to store your own alias|
-| [.gitignore file](https://github.com/potatoscript/git/wiki/gitignore)|https://www.codegrepper.com/code-examples/csharp/aspnet+core+gitignore|
-| [Editing File](https://github.com/potatoscript/git/wiki/Editing-File)| read file `cat` and edit file `vim` or `code`|
-| [Move your project to Remote](https://github.com/potatoscript/git/wiki/Move-Project-to-Remote) | `remote` `push` |
-| [Restoring a File to an Earlier Version](https://github.com/potatoscript/git/wiki/Restore-File-Version)|`restore` |
-| [Trouble Shooting Conflict](https://github.com/potatoscript/git/wiki/Trouble-Shooting-Conflict)|`stash`|
-| [Unstaging Files](https://github.com/potatoscript/git/wiki/Unstaging-Files)|`restore` `clean` |
-| [Viewing Staged & Unstaged Changes](https://github.com/potatoscript/git/wiki/View-Unstaged)|`diff --staged` `difftool` |
-| [Viewing the History](https://github.com/potatoscript/git/wiki/View-History)|`log` |
-| [Viewing a Commit](https://github.com/potatoscript/git/wiki/View-Commit)|`show` `ls-tree`|
-| [Workflow basic](https://github.com/potatoscript/git/wiki/Workflow)|Clone Pull Push from Remote and create branch `branch` `merge`|
-| [Workflow with feature branch](https://github.com/potatoscript/git/wiki/Workflow-feature)|using `tag`|
-| [Wiki Repository](https://github.com/potatoscript/git/wiki/Wiki-Repository)||
-| [Clone Repository](https://github.com/potatoscript/git/wiki/Clone-Repository)|clone all your GitHub repositories and their corresponding wiki repositories at once|
+# **GIT Cheat Sheets & Complete Tutorial Menu**  
+
+| **Title** | **Remark/Code** |  
+|----------------|----------------|  
+| **Introduction to Git** | What is Git? Why use Git? Difference between Git and GitHub |  
+| [Installation](https://github.com/potatoscript/git/wiki/Installation) | Install Git on Windows, macOS, Linux |  
+| **Git Basics** | Understanding repositories, commits, branches, remotes |  
+| [Setting Up Git](https://github.com/potatoscript/git/wiki/Setup) | Configure username, email, aliases using `git config` |  
+| [Alias Setup](https://github.com/potatoscript/git/wiki/Alias-Setup) | Create shortcuts for long Git commands |  
+| [Basic Git Commands](https://github.com/potatoscript/git/wiki/Basic) | `init` `status` `commit` `log` `add` `diff` `checkout` `reset` |  
+| [Creating a Repository](https://github.com/potatoscript/git/wiki/Create-Repository) | Initialize and configure a new repository |  
+| **Working with Files** | Adding, modifying, deleting files in Git |  
+| [.bashrc file](https://github.com/potatoscript/git/wiki/bashrc) | Customize Git command aliases |  
+| [.gitignore file](https://github.com/potatoscript/git/wiki/gitignore) | Ignore files and directories from tracking |  
+| [Editing Files](https://github.com/potatoscript/git/wiki/Editing-File) | Read/edit files using `cat` `vim` `nano` `code` |  
+| [Staging and Committing](https://github.com/potatoscript/git/wiki/Staging-Committing) | `add` `commit` `commit --amend` |  
+| **Branching & Merging** | Managing branches and merging changes |  
+| [Creating & Switching Branches](https://github.com/potatoscript/git/wiki/Branching) | `branch` `checkout` `switch` |  
+| [Merging Branches](https://github.com/potatoscript/git/wiki/Merging) | `merge` `rebase` `cherry-pick` |  
+| [Rebasing](https://github.com/potatoscript/git/wiki/Rebasing) | `rebase` `rebase --interactive` |  
+| [Squashing Commits](https://github.com/potatoscript/git/wiki/Squashing-Commits) | `rebase -i` to combine multiple commits |  
+| [Cherry-Picking](https://github.com/potatoscript/git/wiki/Cherry-Picking) | Apply specific commits from another branch |  
+| **Working with Remote Repositories** | Connecting local Git to remote repositories |  
+| [Adding a Remote Repository](https://github.com/potatoscript/git/wiki/Remote-Repositories) | `git remote add origin` |  
+| [Cloning a Repository](https://github.com/potatoscript/git/wiki/Clone-Repository) | `git clone` to copy a remote repository |  
+| [Fetching, Pulling & Pushing](https://github.com/potatoscript/git/wiki/Tracking-Syncing) | `git fetch` `git pull` `git push` |  
+| [Moving Local Repo to Remote](https://github.com/potatoscript/git/wiki/Move-Project-to-Remote) | `git remote add` `git push -u origin` |  
+| **Undoing & Resetting Changes** | Fix mistakes and revert changes |  
+| [Undoing Changes](https://github.com/potatoscript/git/wiki/Undoing-Changes) | `reset` `restore` `checkout` `reflog` |  
+| [Unstaging Files](https://github.com/potatoscript/git/wiki/Unstaging-Files) | `restore` `reset HEAD` `clean` |  
+| [Reverting Commits](https://github.com/potatoscript/git/wiki/Reverting-Changes) | `revert` `commit --amend` |  
+| [Reset, Checkout, Restore](https://github.com/potatoscript/git/wiki/Reset-Checkout-Restore) | `checkout` `reset` `restore` |  
+| [Restoring a File to an Earlier Version](https://github.com/potatoscript/git/wiki/Restore-File-Version) | `restore` `checkout` `reset` |  
+| **Viewing and Comparing Changes** | Track modifications in your project |  
+| [Viewing Staged & Unstaged Changes](https://github.com/potatoscript/git/wiki/View-Unstaged) | `diff` `diff --staged` `difftool` |  
+| [Comparing Commits](https://github.com/potatoscript/git/wiki/Comparing-Commits) | `diff` `log --oneline` |  
+| [Viewing the History](https://github.com/potatoscript/git/wiki/View-History) | `log` `log --graph` |  
+| [Viewing a Commit](https://github.com/potatoscript/git/wiki/View-Commit) | `show` `ls-tree` |  
+| **Handling Merge Conflicts** | Resolve issues when merging branches |  
+| [Troubleshooting Merge Conflicts](https://github.com/potatoscript/git/wiki/Troubleshooting-Conflicts) | Using `merge` `rebase` conflict resolution |  
+| [Working with Stashes](https://github.com/potatoscript/git/wiki/Stashes) | `stash` `stash pop` `stash apply` `stash drop` |  
+| **Git Tagging & Releases** | Manage software versions using tags |  
+| [Tagging Commits](https://github.com/potatoscript/git/wiki/Tagging) | `git tag` `git tag -a` `git tag -d` |  
+| [Working with Feature Branches](https://github.com/potatoscript/git/wiki/Feature-Branches) | `checkout -b` `merge` `rebase` |  
+| **Advanced Git Features** | Powerful Git tools for workflow |  
+| [Git Hooks](https://github.com/potatoscript/git/wiki/Git-Hooks) | Automate tasks with pre/post-commit hooks |  
+| [Git Submodules](https://github.com/potatoscript/git/wiki/Submodules) | `submodule add` `submodule update` |  
+| [Interactive Rebase](https://github.com/potatoscript/git/wiki/Interactive-Rebase) | `rebase -i` to modify commit history |  
+| [Bisecting](https://github.com/potatoscript/git/wiki/Bisect) | `git bisect` for debugging commits |  
+| **Git Collaboration** | Best practices for working with teams |  
+| [Forking and Pull Requests](https://github.com/potatoscript/git/wiki/Forking-Pull-Requests) | Fork, clone, modify, submit PRs |  
+| [Code Reviews with GitHub](https://github.com/potatoscript/git/wiki/Code-Reviews) | Using GitHub for reviews and approvals |  
+| **Security and Best Practices** | Keep your codebase secure |  
+| [Signing Commits](https://github.com/potatoscript/git/wiki/Signing-Commits) | Use GPG to sign Git commits |  
+| [Git Best Practices](https://github.com/potatoscript/git/wiki/Best-Practices) | Writing good commit messages, branch strategies |  
+| **Git for DevOps & Automation** | Using Git in CI/CD pipelines |  
+| [Git in CI/CD Pipelines](https://github.com/potatoscript/git/wiki/Git-CICD) | Automate testing and deployments |  
+| **Git Internals & Performance** | Deep dive into Git |  
+| [Understanding Git Internals](https://github.com/potatoscript/git/wiki/Git-Internals) | Objects, trees, and commits |  
+| [Optimizing Git Performance](https://github.com/potatoscript/git/wiki/Git-Performance) | `gc` `fsck` `repack` to clean and speed up |  
+| **Git Wiki Repository** | Documenting with Git |  
+| [Wiki Repository](https://github.com/potatoscript/git/wiki/Wiki-Repository) | Manage GitHub Wiki repositories |  
+
 ---
 
-# **Comprehensive Git Tutorial: A Professional Guide**
+# **Comprehensive Git Tutorial**
 
 ## **Introduction**
-Git is a powerful distributed version control system used by developers worldwide to manage source code efficiently. This tutorial provides a detailed guide on using Git effectively, covering fundamental and advanced commands for everyday workflows.
+
+Git is an essential tool for version control, enabling efficient collaboration and code management. This tutorial provides a detailed walkthrough of key Git commands, including rebasing, amending commits, cleaning up repositories, and force pushing changes. 
 
 ---
-## **1. Configuring Git**
-Before using Git, configure your global settings:
+
+## **1. Configuring a Safe Directory in Git**
+
+To ensure Git recognizes your working directory as safe and prevents unnecessary warnings, execute the following command:
 
 ```bash
-# Set your username
-git config --global user.name "Your Name"
-
-# Set your email
-git config --global user.email "your.email@example.com"
-
-# Verify your configuration
-git config --global --list
-```
-
-If you work in multiple repositories, you can set repository-specific configurations using:
-
-```bash
-git config user.name "Repo-Specific Name"
-git config user.email "repo-specific.email@example.com"
+git config --global --add safe.directory "*"
 ```
 
 ---
-## **2. Initializing a Repository**
 
-To create a new Git repository, navigate to your project folder and initialize Git:
+## **2. Rebasing in Git: Editing Commits**
 
-```bash
-git init
-```
+Rebasing allows you to modify commit history. Follow these steps to edit commits:
 
-To clone an existing repository from a remote source:
+1. **Initiate an Interactive Rebase:**
 
-```bash
-git clone <repository-url>
-```
-
-Example:
-```bash
-git clone https://github.com/example/repo.git
-```
-
----
-## **3. Working with Branches**
-### **Creating and Switching Branches**
-```bash
-git branch <new-branch-name>
-git checkout <new-branch-name>
-```
-Alternatively, use:
-```bash
-git checkout -b <new-branch-name>
-```
-
-### **Merging Branches**
-```bash
-git checkout main
-git merge <branch-name>
-```
-
-### **Deleting a Branch**
-```bash
-git branch -d <branch-name>
-```
-For remote branches:
-```bash
-git push origin --delete <branch-name>
-```
-
----
-## **4. Tracking and Committing Changes**
-
-### **Checking Status**
-```bash
-git status
-```
-
-### **Adding Changes**
-```bash
-git add <file-name>
-```
-To add all changes:
-```bash
-git add .
-```
-
-### **Committing Changes**
-```bash
-git commit -m "Your commit message"
-```
-
----
-## **5. Undoing Changes**
-
-### **Unstaging a File**
-```bash
-git reset HEAD <file-name>
-```
-
-### **Reverting a Commit**
-```bash
-git revert <commit-hash>
-```
-
-### **Resetting a Branch**
-```bash
-git reset --hard <commit-hash>
-```
-
----
-## **6. Working with Remote Repositories**
-
-### **Viewing Remote Repositories**
-```bash
-git remote -v
-```
-
-### **Adding a Remote Repository**
-```bash
-git remote add origin <repository-url>
-```
-
-### **Fetching Remote Changes**
-```bash
-git fetch origin
-```
-
-### **Pulling Changes from Remote**
-```bash
-git pull origin main
-```
-
-### **Pushing Changes to Remote**
-```bash
-git push origin <branch-name>
-```
-
----
-## **7. Rebasing and Amending Commits**
-
-### **Interactive Rebase**
-```bash
-git rebase -i HEAD~3
-```
-
-### **Amending the Last Commit**
-```bash
-git commit --amend -m "Updated commit message"
-```
-
----
-## **8. Cleaning Up a Repository**
-
-### **Removing Untracked Files**
-```bash
-git clean -f
-```
-
-### **Optimizing the Repository**
-```bash
-git gc --prune=now
-```
-
----
-## **9. Resolving Merge Conflicts**
-
-1. Open conflicted files and manually resolve issues.
-2. Add resolved files:
    ```bash
-   git add <resolved-file>
+   git rebase -i --root
    ```
-3. Continue the merge:
+
+2. **Modify Commit Messages:**
+   - The command opens an interactive rebase interface.
+   - Change `pick` to `reword` for the commit you wish to edit.
+   
    ```bash
-   git commit
+   reword <commit-hash> <commit-message>
+   ```
+
+3. **Save and Exit:**
+   - Press `ESC`, then type `:wq` and press `Enter` to save changes.
+
+4. **Continue the Rebase Process:**
+
+   ```bash
+   git rebase --continue
+   ```
+
+5. **Force Push Updated Commits:**
+
+   ```bash
+   git push origin <branch-name> --force
+   ```
+
+(Replace `<branch-name>` with your actual branch name.)
+
+---
+
+## **3. Resetting and Amending Commits**
+
+To reset or modify commit messages, follow these steps:
+
+1. **Soft Reset to a Previous Commit:**
+
+   ```bash
+   git reset --soft <commit-hash>
+   ```
+
+2. **Amend a Commit Message:**
+
+   ```bash
+   git commit --amend -m "Updated commit message"
+   ```
+
+3. **Push Amended Commit:**
+
+   ```bash
+   git push origin <branch-name> --force
    ```
 
 ---
-## **10. Best Practices for Git**
-- Commit frequently with meaningful messages.
-- Use branches for new features.
-- Pull before pushing to prevent conflicts.
-- Clean up old branches regularly.
-- Review changes with `git diff` before committing.
+
+## **4. Resolving Missing Objects in Git**
+
+If Git reports missing objects, perform the following steps:
+
+1. **Check Repository Integrity:**
+
+   ```bash
+   git fsck --full
+   ```
+
+2. **Optimize and Cleanup the Repository:**
+
+   ```bash
+   git gc --prune=now
+   ```
 
 ---
-## **Conclusion**
-By mastering these Git commands and best practices, you can manage source code efficiently and collaborate effectively in any development environment. Happy coding!
+
+## **5. Cleaning and Optimizing a Git Repository**
+
+To maintain repository efficiency:
+
+1. **Remove Old References:**
+
+   ```bash
+   git reflog expire --expire=now --all
+   ```
+
+2. **Run Garbage Collection:**
+
+   ```bash
+   git gc --prune=now
+   ```
+
+3. **Repack the Repository:**
+
+   ```bash
+   git repack -A -d
+   ```
+
+4. **Validate Repository Health:**
+
+   ```bash
+   git fsck --full
+   ```
+
+---
+
+## **6. Merging Unrelated Histories**
+
+When pulling changes from different repositories, you may need to allow unrelated histories:
+
+```bash
+git pull origin main --allow-unrelated-histories
+```
+
+---
+
+## **Interactive Rebase: Editing Commit Messages**
+
+To modify commit messages in Git using interactive rebase, follow these steps:
+
+1. **Start the Rebase:**
+   Open your commit history in interactive mode:
+
+   ```bash
+   git rebase -i --root
+   ```
+
+2. **Enter Insert Mode:**
+   Git will open the commit history in your configured text editor. To make edits, press `i` to enter *INSERT mode*.
+
+3. **Change `pick` to `reword`:**
+   Locate the commit you want to edit and replace `pick` with `reword`. For example:
+
+   ```bash
+   reword <commit-hash> <commit-message>
+   ```
+
+   This allows you to modify the commit message.
+
+4. **Exit Insert Mode:**
+   Once you've made the necessary changes, press the `ESC` key to exit *INSERT mode*.
+
+5. **Save and Quit:**
+   Save the changes and close the editor by typing:
+
+   ```bash
+   :wq
+   ```
+
+   Then press `Enter`.
+
+6. **Continue the Rebase:**
+   After saving, Git will prompt you to confirm the rebase. To proceed, run:
+
+   ```bash
+   git rebase --continue
+   ```
+
+This process ensures that your commit history remains structured while allowing you to refine commit messages effectively.
+
+
+---
+
+## **Summary of Key Commands**
+
+| Task | Command |
+|---|---|
+| Set safe directory | `git config --global --add safe.directory "*"` |
+| Start interactive rebase | `git rebase -i --root` |
+| Amend commit message | `git commit --amend -m "Updated message"` |
+| Force push changes | `git push origin <branch-name> --force` |
+| Check for missing objects | `git fsck --full` |
+| Run garbage collection | `git gc --prune=now` |
+| Remove old references | `git reflog expire --expire=now --all` |
+| Merge unrelated histories | `git pull origin main --allow-unrelated-histories` |
+
 
 
 
@@ -233,6 +280,32 @@ By mastering these Git commands and best practices, you can manage source code e
   2. GitFlow - more structure, more rules...
      - long-running : main + develop
      - short-lived : features, releases, hotfixes.
+
+
+---
+
+| Title    | Remark/code  |
+| -------------| -----|
+| [Installation](https://github.com/potatoscript/git/wiki/Installation) | Setup and Configuration GIT `config`|
+| [Alias Setup](https://github.com/potatoscript/git/wiki/Alias-Setup)|shortcut for those long long commands|
+| [Basic Operation](https://github.com/potatoscript/git/wiki/Basic)|`init` `status` `commit` `cat` list `ls` `echo` `touch` `rm` |
+| [Create Repository](#Create-Repository)|https://stackoverflow.com/questions/20325089/hosting-a-git-server-on-localhost|
+| [.bashrc file](https://github.com/potatoscript/git/wiki/bashrc)|Create .bashrc file to store your own alias|
+| [.gitignore file](https://github.com/potatoscript/git/wiki/gitignore)|https://www.codegrepper.com/code-examples/csharp/aspnet+core+gitignore|
+| [Editing File](https://github.com/potatoscript/git/wiki/Editing-File)| read file `cat` and edit file `vim` or `code`|
+| [Move your project to Remote](https://github.com/potatoscript/git/wiki/Move-Project-to-Remote) | `remote` `push` |
+| [Restoring a File to an Earlier Version](https://github.com/potatoscript/git/wiki/Restore-File-Version)|`restore` |
+| [Trouble Shooting Conflict](https://github.com/potatoscript/git/wiki/Trouble-Shooting-Conflict)|`stash`|
+| [Unstaging Files](https://github.com/potatoscript/git/wiki/Unstaging-Files)|`restore` `clean` |
+| [Viewing Staged & Unstaged Changes](https://github.com/potatoscript/git/wiki/View-Unstaged)|`diff --staged` `difftool` |
+| [Viewing the History](https://github.com/potatoscript/git/wiki/View-History)|`log` |
+| [Viewing a Commit](https://github.com/potatoscript/git/wiki/View-Commit)|`show` `ls-tree`|
+| [Workflow basic](https://github.com/potatoscript/git/wiki/Workflow)|Clone Pull Push from Remote and create branch `branch` `merge`|
+| [Workflow with feature branch](https://github.com/potatoscript/git/wiki/Workflow-feature)|using `tag`|
+| [Wiki Repository](https://github.com/potatoscript/git/wiki/Wiki-Repository)||
+| [Clone Repository](https://github.com/potatoscript/git/wiki/Clone-Repository)|clone all your GitHub repositories and their corresponding wiki repositories at once|
+
+---
 
 ### home
 
