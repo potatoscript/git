@@ -460,3 +460,83 @@ by using cherry pick you can choice C2 or C4 only to move to branch master
   git checkout master
   git reset --hard HEAD~1 #this will remove the C3 from master branch
 ```
+
+---
+
+# To add a new SSH key to your GitHub account, follow these steps:
+
+### Step 1: Generate a New SSH Key (if you don't have one already)
+
+1. Open your terminal (Git Bash, macOS Terminal, or Linux Terminal).
+2. Generate a new SSH key using the following command, replacing `your_email@example.com` with your GitHub email address:
+   ```bash
+   ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+   ```
+   This will create a new SSH key. You’ll be prompted to choose a location for saving the key (press **Enter** to save it to the default location `~/.ssh/id_rsa`).
+
+3. If you want to add a passphrase for extra security, you can do so. If not, press **Enter** twice to skip.
+
+### Step 2: Add the SSH Key to the SSH Agent
+
+Now, you need to add the new SSH key to your SSH agent.
+
+1. Start the SSH agent in the background (for Linux/macOS):
+   ```bash
+   eval "$(ssh-agent -s)"
+   ```
+
+2. Add the SSH private key to the SSH agent:
+   ```bash
+   ssh-add ~/.ssh/id_rsa
+   ```
+
+### Step 3: Copy the SSH Public Key
+
+1. To view the SSH public key, run the following command:
+   ```bash
+   cat ~/.ssh/id_rsa.pub
+   ```
+   This will display your SSH public key.
+
+2. Copy the entire key (starting from `ssh-rsa` and ending with your email address).
+
+### Step 4: Add the SSH Key to Your GitHub Account
+
+1. Go to your GitHub account in your browser and sign in.
+2. Click on your profile picture in the top-right corner and select **Settings**.
+3. In the left sidebar, click **SSH and GPG keys**.
+4. Click the **New SSH key** button.
+5. In the **Title** field, give your SSH key a recognizable name (e.g., "My Laptop SSH Key").
+6. Paste the SSH public key you copied earlier into the **Key** field.
+7. Click **Add SSH key**.
+
+### Step 5: Test the SSH Connection
+
+Now that your SSH key is added to GitHub, test the connection:
+
+1. In your terminal, run the following command:
+   ```bash
+   ssh -T git@github.com
+   ```
+   If everything is set up correctly, you should see a message like this:
+   ```
+   Hi your_username! You've successfully authenticated, but GitHub does not provide shell access.
+   ```
+
+### Step 6: Use SSH for Your GitHub Repository
+
+Finally, update your repository’s remote URL to use SSH instead of HTTPS:
+
+1. Go to your repository on GitHub and click the **Code** button.
+2. Copy the SSH URL, which will look like this:
+   ```
+   git@github.com:potatoscript/your_repository.git
+   ```
+
+3. Update the remote URL in your local repository:
+   ```bash
+   git remote set-url origin git@github.com:potatoscript/your_repository.git
+   ```
+
+
+
