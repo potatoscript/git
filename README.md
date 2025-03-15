@@ -537,6 +537,109 @@ Finally, update your repository’s remote URL to use SSH instead of HTTPS:
    ```bash
    git remote set-url origin git@github.com:potatoscript/your_repository.git
    ```
+---
+
+# Set up SSH keys for two GitHub accounts on the same PC. 
+
+#### 1. **Generate SSH Keys for Both Accounts:**
+
+If you haven't already, generate two separate SSH keys for each GitHub account. You can do this using the following commands:
+
+```bash
+# For the first GitHub account
+ssh-keygen -t rsa -b 4096 -C "your_email_1@example.com" -f ~/.ssh/id_rsa_account1
+
+# For the second GitHub account
+ssh-keygen -t rsa -b 4096 -C "your_email_2@example.com" -f ~/.ssh/id_rsa_account2
+```
+
+- The `-C` flag is used to label the SSH key with the email associated with the account.
+- The `-f` flag allows you to specify a custom filename for the key. The default is `id_rsa`, but you want to name them differently (e.g., `id_rsa_account1` and `id_rsa_account2`).
+
+#### 2. **Add the SSH Keys to the SSH Agent:**
+
+Make sure your SSH agent is running, then add both keys to the agent:
+
+```bash
+# Start the SSH agent (if it's not already running)
+eval "$(ssh-agent -s)"
+
+# Add the first key
+ssh-add ~/.ssh/id_rsa_account1
+
+# Add the second key
+ssh-add ~/.ssh/id_rsa_account2
+```
+
+#### 3. **Add SSH Keys to GitHub:**
+
+- Log into each GitHub account and add the corresponding public key to each account.
+  - For Account 1: Go to **Settings** → **SSH and GPG keys** → **New SSH key**, and paste the contents of `~/.ssh/id_rsa_account1.pub` into the form.
+  - For Account 2: Do the same for `~/.ssh/id_rsa_account2.pub` on your second GitHub account.
+
+#### 4. **Edit the SSH Config File:**
+
+Now, edit the SSH config file to specify which key to use for each GitHub account.
+
+```bash
+# Open the SSH config file for editing
+nano ~/.ssh/config
+```
+
+Add the following configuration:
+
+```bash
+# For the first GitHub account
+Host github.com-account1
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_account1
+
+# For the second GitHub account
+Host github.com-account2
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_account2
+```
+
+- The `Host` entry is a unique name you’ll use to differentiate between the two accounts when you interact with GitHub.
+- The `HostName` is always `github.com`.
+- The `IdentityFile` points to the respective private key for each account.
+
+#### 5. **Clone Repositories Using the Correct Host:**
+
+When cloning or interacting with a repository, use the `Host` alias you specified in the SSH config file:
+
+- For the first account:
+
+```bash
+git clone git@github.com-account1:username/repository.git
+```
+
+- For the second account:
+
+```bash
+git clone git@github.com-account2:username/repository.git
+```
+
+When you use the alias (`github.com-account1` or `github.com-account2`), SSH will automatically use the appropriate key for each GitHub account.
+
+#### 6. **Switch Between Accounts (If Needed):**
+
+If you're already working with repositories and want to switch between accounts, you just need to ensure the correct `Host` alias is used in the Git URL.
+
+- For the first account, update the remote URL like this:
+
+```bash
+git remote set-url origin git@github.com-account1:username/repository.git
+```
+
+- For the second account:
+
+```bash
+git remote set-url origin git@github.com-account2:username/repository.git
+```
+
 
 ---
 
