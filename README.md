@@ -538,5 +538,10 @@ Finally, update your repository’s remote URL to use SSH instead of HTTPS:
    git remote set-url origin git@github.com:potatoscript/your_repository.git
    ```
 
+---
 
+# Check .gitconfig for Safe Directory Entries:
+```
+git config --global --edit
+```
 
